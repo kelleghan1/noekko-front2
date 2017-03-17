@@ -1,0 +1,18 @@
+body{
+  background-color: blue;
+}
+
+section{
+  width: 100%;
+}
+
+header{
+  @extend section;
+}
+
+.container{
+  
+}
+
+.article-description{
+}
