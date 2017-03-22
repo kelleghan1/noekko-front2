@@ -1,4 +1,4 @@
-var thisApp = angular.module('Noekko', ['ui.router'])
+var thisApp = angular.module('Noekko', ['ui.router', 'ngAnimate'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -7,8 +7,8 @@ var thisApp = angular.module('Noekko', ['ui.router'])
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: 'views/home.html',
-    controller: 'HomeController'
+    templateUrl: 'views/home.html'
+    // controller: 'HomeController'
   })
 
 })

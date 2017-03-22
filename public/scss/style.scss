@@ -1,18 +1,115 @@
 body{
-  background-color: blue;
+  // background-color: #f7f7f7;
+  margin: 0;
+  background-image: url('/images/noekko-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
+  max-width: 100%;
 }
 
 section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+img{
   width: 100%;
 }
 
 header{
   @extend section;
+  // background-color: #fff;
+}
+
+.header-wrap{
+  margin-left: 10px;
+}
+
+.header-logo-wrap{
+  width: 150px;
+  padding: 20px 0;
+  img{
+    width: 100%;
+  }
 }
 
 .container{
-  
+  width: 80%;
+  max-width: 960px;
+  margin: 0 -10px;
+}
+
+@media (max-width: 1200px){
+  .container{
+    width: 960px;
+  }
+}
+
+.article-wrap{
+  box-sizing: border-box;
+  padding: 10px;
+  width: calc(100%/3);
+  float: left;
+  .article-header{
+
+    .article-thumbnail{
+      width: 80px;
+      height: 80px;
+      float: left;
+      margin-right: 15px;
+      overflow: hidden;
+    }
+    .article-header{
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 960px){
+  .article-wrap{
+    width: calc(100%/2);
+  }
+}
+
+@media (max-width: 600px){
+  .article-wrap{
+    width: 100%;
+  }
+  body{
+    background-size: 100%;
+  }
 }
 
 .article-description{
+}
+
+.slide.ng-enter {
+  transition:0.25s linear all;
+  transform:translateX(350px);
+  opacity: 0;
+}
+.slide.ng-enter.ng-enter-active {
+  transform:translateX(0);
+  opacity: 1;
+}
+.slide.ng-enter-stagger {
+  transition-delay: 0.04s;
+}
+
+/*ANIMATION 2*/
+
+.slide2.ng-enter {
+  transition: 0.25s linear all;
+  transform:translateX(500px);
+  opacity: 0;
+}
+.slide2.ng-enter.ng-enter-active {
+  transform:translateX(0);
+  opacity: 1;
+}
+.slide2.ng-enter-stagger {
+  transition-delay: 0.15s;
 }
