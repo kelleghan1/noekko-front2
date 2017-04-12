@@ -4,6 +4,7 @@ body{
   background-image: url('/images/noekko-background.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   padding: 15px;
   max-width: 100%;
@@ -25,7 +26,7 @@ header{
 }
 
 .header-wrap{
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .header-logo-wrap{
@@ -39,7 +40,7 @@ header{
 .container{
   width: 80%;
   max-width: 960px;
-  margin: 0 -10px;
+  margin: 0 -15px;
 }
 
 @media (max-width: 1200px){
@@ -48,23 +49,54 @@ header{
   }
 }
 
+.story-wrap{
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  h2{
+    margin: 0;
+  }
+}
+
+.sort-wrap{
+  float: right;
+  padding-right: 15px;
+}
+
 .article-wrap{
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px;
   width: calc(100%/3);
   float: left;
-  .article-header{
+  display: flex;
 
-    .article-thumbnail{
-      width: 80px;
-      height: 80px;
-      float: left;
-      margin-right: 15px;
-      overflow: hidden;
+  .article-thumbnail{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+  .article-content{
+    h4, h3{
+      margin-top: 0;
+      margin-bottom: 10px;
     }
-    .article-header{
-      margin: 0;
-    }
+    flex: 1;
+    margin: 0;
+  }
+  .article-description{
+    height: 100px;
+    margin-top: 0;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 5;
+    // -webkit-box-orient: vertical;
+    overflow: hidden;
+    // visibility: hidden;
+    // height: 0;
+    // text-overflow: ellipsis;
   }
 }
 
@@ -78,16 +110,18 @@ header{
   .article-wrap{
     width: 100%;
   }
+  .article-description{
+
+  }
   body{
     background-size: 100%;
   }
 }
 
-.article-description{
-}
+
 
 .slide.ng-enter {
-  transition:0.25s linear all;
+  transition:0.21s linear all;
   transform:translateX(350px);
   opacity: 0;
 }
@@ -96,7 +130,7 @@ header{
   opacity: 1;
 }
 .slide.ng-enter-stagger {
-  transition-delay: 0.04s;
+  transition-delay: 0.05s;
 }
 
 /*ANIMATION 2*/
@@ -111,5 +145,5 @@ header{
   opacity: 1;
 }
 .slide2.ng-enter-stagger {
-  transition-delay: 0.15s;
+  transition-delay: 0.05s;
 }

@@ -1,29 +1,62 @@
 
 
+<section>
+  <div class="container">
+
+    <div class="story-wrap">
+      <h2>{{story}}</h2>
+    </div>
+
+    <div class="sort-wrap">
+
+      <label for="">Sort By</label>
+
+      <select ng-model="orderBy">
+        <option value="date">Date low - high</option>
+        <option value="title">Title A - Z</option>
+        <option value="-title">Title Z - A</option>
+      </select>
+
+    </div>
+
+
+  </div>
+</section>
 
 
 <section>
-  <div class="container" ng-controller="HomeController">
+  <div class="container">
 
-    <div class="article-wrap slide" ng-repeat="article in articles" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
 
-      <div class="article-header">
+    <div class="article-wrap slide" ng-repeat="article in articlesFiltered = (articles | orderBy:orderBy)" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
 
-        <div class="article-thumbnail">
-          <img src="{{article.image}}" alt="">
-        </div>
-
-        <div class="article-title">
-          <h2>{{article.title}}</h2>
-        </div>
-
+      <div class="article-thumbnail" style="background-image: url('{{article.image}}')">
       </div>
 
-      <div class="article-description">
-        {{article.description}}
+      <div class="article-content">
+
+        <div class="article-title">
+          <h4>{{article.title}}</h4>
+        </div>
+
+        <div class="article-date">
+          <p>{{article.published}}</p>
+        </div>
+
+        <p class="article-description">
+          {{article.description}}
+        </p>
+
       </div>
 
     </div>
 
   </div>
 </section>
+
+
+<script type="text/javascript">
+
+
+
+</script>

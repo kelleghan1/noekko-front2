@@ -1,6 +1,6 @@
 thisApp
 .factory('HomeService', function($http){
-
+console.log('SERVICE');
   return {
 
     get: function(){

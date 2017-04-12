@@ -21,7 +21,10 @@ router.get('/api/data', function(req, res, next){
   db.any('select * from articles')
   .then(function (data) {
     console.log("DATA", data);
-    res.send(data);
+    res.send({
+      story: 'The Story',
+      articles: data
+    });
   })
   .catch(function (err) {
     return next(err);
