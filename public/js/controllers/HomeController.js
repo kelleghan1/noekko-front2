@@ -38,7 +38,7 @@ thisApp
     var getPost = function(){
 
       HomeService.get().then(function(result){
-        $scope.articles = result;
+        $scope.articles = result.articles;
         // $scope.story = result.data.story;
 
         setTimeout(function(){
