@@ -8,6 +8,13 @@ body {
   padding: 15px;
   max-width: 100%; }
 
+a {
+  color: #ccc;
+  text-decoration: none; }
+  a:hover {
+    color: #ccc;
+    text-decoration: none; }
+
 section, header {
   display: flex;
   justify-content: center;
