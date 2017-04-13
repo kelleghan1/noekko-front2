@@ -106,12 +106,22 @@ header{
   }
 }
 
+#top{
+  padding-bottom: 20px;
+}
+
 @media (max-width: 600px){
   .article-wrap{
     width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .article-date p, .article-source p{
+    margin: 8px 0;
   }
   .article-description{
-
+    margin-bottom: 0;
+    height: auto;
   }
   body{
     background-size: 100%;

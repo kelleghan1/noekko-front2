@@ -5,7 +5,7 @@ console.log('SERVICE');
 
     get: function(){
       console.log('CHECK');
-      return $http.get('/api/data')
+      return $http.get('http://ec2-35-165-125-36.us-west-2.compute.amazonaws.com/stories/json')
       .then(
         function(success){
           console.log('success1', success);
