@@ -9,7 +9,7 @@ console.log('SERVICE');
       .then(
         function(success){
           console.log('success1', success);
-          return success;
+          return success.data;
         },
         function(error){
           console.log('error1', error);
