@@ -14,24 +14,24 @@ thisApp
     $scope.articles = [];
     $scope.orderBy = 'date';
 
-    var ellipsizeTextBox = function(element) {
+    // var ellipsizeTextBox = function(element) {
 
-      var el = document.getElementsByClassName(element);
-      console.log("checking", el);
+      // var el = document.getElementsByClassName(element);
+      // console.log("checking", el);
 
 
-      for (var i = 0; i < el.length; i++) {
-        var keep = el[i].innerHTML;
-
-        while(el[i].scrollHeight > el[i].offsetHeight) {
-          el[i].innerHTML = keep;
-          el[i].innerHTML = el[i].innerHTML.substring(0, el[i].innerHTML.length-1);
-          keep = el[i].innerHTML;
-          el[i].innerHTML = el[i].innerHTML + "...";
-        }
-
-      }
-    }
+      // for (var i = 0; i < el.length; i++) {
+      //   var keep = el[i].innerHTML;
+      //
+      //   while(el[i].scrollHeight > el[i].offsetHeight) {
+      //     el[i].innerHTML = keep;
+      //     el[i].innerHTML = el[i].innerHTML.substring(0, el[i].innerHTML.length-1);
+      //     keep = el[i].innerHTML;
+      //     el[i].innerHTML = el[i].innerHTML + "...";
+      //   }
+      //
+      // }
+    // }
 
 
 
@@ -41,10 +41,10 @@ thisApp
         $scope.articles = result.articles;
         // $scope.story = result.data.story;
 
-        setTimeout(function(){
-          ellipsizeTextBox('article-description');
+        // setTimeout(function(){
+          // ellipsizeTextBox('article-description');
 
-        }, 500)
+        // }, 500)
       })
 
     };
