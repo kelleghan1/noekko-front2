@@ -38,8 +38,8 @@ thisApp
     var getPost = function(){
 
       HomeService.get().then(function(result){
-        $scope.articles = result.data.articles;
-        $scope.story = result.data.story;
+        $scope.articles = result;
+        // $scope.story = result.data.story;
 
         setTimeout(function(){
           ellipsizeTextBox('article-description');
