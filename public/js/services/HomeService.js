@@ -47,7 +47,7 @@ thisApp
 
               allStories.push({
                 articles: success.data[0].articles,
-                storyTitle: success.data[0].title + id,
+                storyTitle: success.data[0].title + ' ' + id,
                 date: "2017-03-11 18:02:37",
                 featured_image: success.data[0].featured_image + ''
               });
