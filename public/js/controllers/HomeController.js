@@ -10,14 +10,15 @@ thisApp
     $http
   ){
 
-    $scope.story = 'No Story';
-    $scope.articles = [];
+    $scope.stories;
+    $scope.articles;
     $scope.orderBy = 'date';
 
 
     var getPost = function(){
 
       HomeService.get().then(function(result){
+        $scope.stories = result;
         $scope.articles = result[0].articles;
         console.log('CTRL', result);
       })

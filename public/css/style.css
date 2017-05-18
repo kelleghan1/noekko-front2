@@ -5,7 +5,8 @@ body {
   background-size: 100%;
   background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
-  padding: 15px;
+  padding: 15px 0;
+  margin: 0 15px;
   max-width: 100%; }
 
 a {
@@ -40,12 +41,14 @@ img {
 @media (max-width: 1200px) {
   .container {
     width: 960px; } }
-.story-wrap {
-  float: left;
-  width: 50%;
-  padding-left: 15px; }
-  .story-wrap h2 {
-    margin: 0; }
+#main-content {
+  display: flex; }
+  #main-content #story-list {
+    margin: 0 15px;
+    flex-shrink: 1; }
+  #main-content #article-list {
+    margin: 0 0 0 15px;
+    flex: 1; }
 
 .sort-wrap {
   float: right;
@@ -58,7 +61,7 @@ img {
 
 .article-wrap {
   box-sizing: border-box;
-  padding: 15px;
+  padding-top: 15px;
   width: 100%;
   border-bottom: 1px solid black;
   float: left;
