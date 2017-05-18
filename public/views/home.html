@@ -25,8 +25,15 @@
 
 
 <section>
-  <div class="container">
 
+  <div id="story-list" class="">
+    <div class="story-wrap" ng-repeat="story in stories">
+      <p>story</p>
+    </div>
+  </div>
+
+
+  <div id="article-list" class="container">
 
     <div class="article-wrap slide" ng-repeat="article in articlesFiltered = (articles | orderBy:orderBy)" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
 
@@ -57,10 +64,3 @@
 
   </div>
 </section>
-
-
-<script type="text/javascript">
-
-
-
-</script>
